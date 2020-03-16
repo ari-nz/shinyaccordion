@@ -1,0 +1,49 @@
+.accordion {
+  box-sizing: border-box;
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
+  width: 100%;
+}
+
+.accordion-select {
+  cursor: pointer;
+  margin: 0;
+  opacity: 0;
+  z-index: 1;
+}
+
+.accordion-title {
+  position: relative;
+}
+
+.accordion-title:not(:nth-last-child(2))::after {
+  border: 1px solid transparent;
+  bottom: 0;
+  content: '';
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.accordion-title span {
+  bottom: 0px;
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.accordion-content {
+  box-sizing: border-box;
+  overflow: auto;
+  position: relative;
+  transition: margin 0.3s ease 0.1s;
+}
+
+.accordion-select:checked + .accordion-title + .accordion-content {
+  margin-bottom: 0;
+  margin-right: 0;
+}

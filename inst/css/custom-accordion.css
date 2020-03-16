@@ -1,0 +1,59 @@
+
+
+
+
+.accordion{{inputId}} {
+    border-color: {{border_color}};
+    border-radius: {{border_radius}};
+    border-style: solid;
+    border-width: {{border_size}};
+    flex-direction: {{flex_direction}};
+    height: {{accordion_height}};
+}
+
+{{inputId}} .accordion-title,
+{{inputId}} .accordion-select  {
+    background-color: {{title_background}};
+    color: {{title_text_color}};
+    width: {{accordion_title_width}};
+    height: {{accordion_title_height}};
+    font-size: {{title_font_size}};
+}
+
+{{inputId}} .accordion-select {
+    margin-bottom: -{{title_width}}!important;
+    margin-right: -{{title_width}}!important;
+}
+
+{{inputId}} .accordion-title:not(:nth-last-child(2))::after {
+    border-bottom-color: {{title_border_color_bottom}};
+    border-right-color: {{title_border_color_right}};
+}
+
+{{inputId}} .accordion-select:hover   + {{inputId}} .accordion-title,
+{{inputId}} .accordion-select:checked + {{inputId}} .accordion-title {
+    background-color: {{title_hover}};
+}
+
+ {{inputId}} .accordion-title span  {
+    transform: rotate({{title_rotate}}deg);
+    -ms-writing-mode: lr-bt;
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation={{title_ms_rotation}});
+    padding-bottom: {{title_padding_bottom}};
+    padding-top:    {{title_padding_top}};
+    padding-left:   {{title_padding_left}};
+    padding-right:  {{title_padding_right}};
+    line-height:    {{title_height}};
+}
+
+{{inputId}} .accordion-content {
+    background-color: {{content_background}};
+    color:         {{content_text_color}};
+    padding:       {{content_padding}};
+    height:        {{a_content_height}};
+    margin-bottom: {{a_content_margin_bottom}};
+    margin-right:  {{a_content_margin_right}};
+    width:         {{a_content_width}};
+}
+
+
